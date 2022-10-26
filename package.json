@@ -1,0 +1,22 @@
+{
+  "name": "10-module-challenge",
+  "version": "1.0.0",
+  "description": "Object-Oriented Programming Challenge: Team Profile Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josejpd3/10-Module-Challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josejpd3/10-Module-Challenge/issues"
+  },
+  "homepage": "https://github.com/Josejpd3/10-Module-Challenge#readme"
+}
