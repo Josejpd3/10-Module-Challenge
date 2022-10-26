@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Josejpd3/10-Module-Challenge/issues"
   },
-  "homepage": "https://github.com/Josejpd3/10-Module-Challenge#readme"
+  "homepage": "https://github.com/Josejpd3/10-Module-Challenge#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^29.2.2"
+  }
 }
