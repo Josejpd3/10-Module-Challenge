@@ -10,13 +10,13 @@ test('1 (I) should instantiate Manager Manager instance', () => {
 
 test('2 (S) should set name via contructor arguments', () => { 
     const testValue = "Jose";
-    const e = new Manager(testValue, "id", "email");
+    const e = new Manager(testValue, "id", "email", "officeNumber");
     expect(e.name).toBe(testValue);
   })
 
   test('3 (S) should set id via contructor arguments', () => { 
     const testValue = 81;
-    const e = new Manager("name", testValue);
+    const e = new Manager("name", testValue, "email", "officeNumber");
     expect(e.id).toBe(testValue);
   })
 
