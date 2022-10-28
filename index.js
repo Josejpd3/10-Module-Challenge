@@ -58,6 +58,15 @@ function promptEngineer() {
   });
 }
 
+function promptIntern() {
+  inquirer.prompt(Intern.internQuestions)
+  .then(function(answers) {
+      const intern = new Intern.Intern(answers.internName, answers.internId, answers.internEmail, answers.internGithub);
+      teamMembers.push(intern);
+      addEmployee();
+  });
+}
+
 
 managerPrompt()
 
