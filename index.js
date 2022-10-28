@@ -49,6 +49,15 @@ function addEmployee() {
   });
 }
 
+function promptEngineer() {
+  inquirer.prompt(Engineer.engineerQuestions)
+  .then(function(answers) {
+      const engineer = new Engineer.Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+      teamMembers.push(engineer);
+      addEmployee();
+  });
+}
+
 
 managerPrompt()
 
