@@ -12,6 +12,17 @@ const render = require('./src/page-template.js');
 
 const teamMembers = [];
 
+const employeeOptions = [
+  {
+    type: 'list',
+    message: 'Please select which option you would like to continue with:',
+    name: 'options',
+    choices: ['add an engineer', 'add an intern', 'finish building my team']
+  },
+  
+];
+
+
 function managerPrompt() {
   inquirer.prompt(Manager.managerQuestions)
   .then(function(answers) {
