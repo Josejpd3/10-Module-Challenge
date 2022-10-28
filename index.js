@@ -25,8 +25,8 @@ const employeeOptions = [
 
 function managerPrompt() {
   inquirer.prompt(Manager.managerQuestions)
-  .then(function(answers) {
-      const manager = new Manager.Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber);
+  .then(function(answer) {
+      const manager = new Manager.Manager(answer.managerName, answer.managerId, answer.managerEmail, answer.officeNumber);
       teamMembers.push(manager);
       addEmployee();
   });
@@ -35,8 +35,8 @@ function managerPrompt() {
 
 function addEmployee() {
   inquirer.prompt(employeeOptions)
-  .then(function(userChoice) {
-      switch (userChoice.options) {
+  .then(function(answer) {
+      switch (answer.options) {
           case 'add an engineer':
               promptEngineer();
               break;
@@ -53,7 +53,7 @@ function addEmployee() {
 managerPrompt()
 
 // function for creating manager - inquirer questions
-  // take those questions and create a new Manager with the user provided answers
+  // take those questions and create a new Manager with the user provided answer
   // push that new Manager to the team members array
 
   // follow the same pattern for each type of employee
