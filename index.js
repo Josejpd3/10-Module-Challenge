@@ -32,6 +32,23 @@ function managerPrompt() {
   
 }
 
+function addEmployee() {
+  inquirer.prompt(employeeOptions)
+  .then(function(userChoice) {
+      switch (userChoice.options) {
+          case 'add an engineer':
+              promptEngineer();
+              break;
+          case 'add an intern':
+              promptIntern();
+              break;
+          default:
+              buildTeam();
+      }
+  });
+}
+
+
 managerPrompt()
 
 // function for creating manager - inquirer questions
