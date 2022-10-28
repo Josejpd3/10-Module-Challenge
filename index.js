@@ -28,6 +28,7 @@ function managerPrompt() {
   .then(function(answers) {
       const manager = new Manager.Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber);
       teamMembers.push(manager);
+      addEmployee();
   });
   
 }
