@@ -12,6 +12,16 @@ const render = require('./src/page-template.js');
 
 const teamMembers = [];
 
+function managerPrompt() {
+  inquirer.prompt(Manager.managerQuestions)
+  .then(function(answers) {
+      const manager = new Manager.Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber);
+      teamMembers.push(manager);
+  });
+  
+}
+
+managerPrompt()
 
 // function for creating manager - inquirer questions
   // take those questions and create a new Manager with the user provided answers
