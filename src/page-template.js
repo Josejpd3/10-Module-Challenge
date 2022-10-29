@@ -66,6 +66,27 @@ function createEngineer (data) {
                 </div>
         `;
     };
+
+    
+    // Intern Card
+function createIntern (data) {
+    return `
+                <div class="card w-72 h-80 bg-slate-200 m-8">
+                    <div class="card-title flex flex-col bg-blue-600 text-white font-medium h-28 p-4">
+                        <h3 class="name text-4xl">${data.name}</h3>
+                        <div class="IconRole flex flex-row text-2xl pt-2">
+                            <i class="fa-solid fa-graduation-cap fa-sm pt-4 pr-2"></i>
+                            <p class="role">Intern</p>
+                        </div>
+                    </div>
+                    <div class="card-info flex flex-col justify-center bg-white m-6 inset-y-1/4 mt-10">
+                        <div class="p-2 border-2 border-b-0 border-solid">ID: ${data.id}</div>
+                        <div class="p-2 border-2 border-solid">Email: ${data.email}</div>
+                        <div class="p-2 border-2 border-t-0 border-solid">School: ${data.school}</div>
+                    </div>
+                </div>
+        `;
+    };
 }
 
 module.exports = createHtml;
