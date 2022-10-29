@@ -62,7 +62,7 @@ function promptEngineer() {
 function promptIntern() {
   inquirer.prompt(Intern.internQuestions)
   .then(function(answers) {
-      const intern = new Intern.Intern(answers.internName, answers.internId, answers.internEmail, answers.internGithub);
+      const intern = new Intern.Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
       teamMembers.push(intern);
       addEmployee();
   });
