@@ -55,7 +55,7 @@ function createEngineer (data) {
                     <div class="card-info flex flex-col justify-center bg-white m-6 inset-y-1/4 mt-10">
                         <div class="p-2 border-2 border-b-0 border-solid">ID: ${data.id}</div>
                         <div class="p-2 border-2 border-solid">Email: <a href="mailto:${data.email}">${data.email}</a></div>
-                        <div class="p-2 border-2 border-t-0 border-solid">Github: <a href="https://github.com/${data.github}" target="_blank">${data.github} rel="noopener noreferrer"</a></div>
+                        <div class="p-2 border-2 border-t-0 border-solid">Github: <a href="https://github.com/${data.github}" target="_blank" rel="noopener noreferrer>${data.github}"</a></div>
                     </div>
                 </div>
         `;
