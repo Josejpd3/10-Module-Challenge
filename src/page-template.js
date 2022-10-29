@@ -87,6 +87,27 @@ function createIntern (data) {
                 </div>
         `;
     };
+
+    cards = [];
+
+    // Loops through team members
+    
+    for (i = 0; i < teamMembers.length; i++) {
+        if (teamMembers[i].getRole() === "Manager") {
+            const managerCard = createManager(teamMembers[i]);
+            cards.push(managerCard);
+        }
+        if (teamMembers[i].getRole() === "Intern") {
+            const internCard = createEngineer(teamMembers[i]);
+            cards.push(internCard);
+        }
+        if (teamMembers[i].getRole() === "Engineer") {
+            const engineerCard = createIntern(teamMembers[i]);
+            cards.push(engineerCard);
+        }
+    }
+    employeeCards = cards.join(" ");
+    return start + employeeCards + end;
 }
 
 module.exports = createHtml;
