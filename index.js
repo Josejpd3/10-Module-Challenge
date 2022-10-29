@@ -67,6 +67,10 @@ function promptIntern() {
   });
 }
 
+function buildTeam() {
+  fs.appendFile(distPath, render(teamMembers), (err) => err ? console.error(err) : console.log(`Your team's page has been generated in ${DIST_DIR}/team.html`));
+}
+
 
 managerPrompt()
 
