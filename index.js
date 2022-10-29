@@ -69,7 +69,7 @@ function promptIntern() {
 }
 
 function buildTeam() {
-  fs.appendFile(distPath, render(teamMembers), (err) => err ? console.error(err) : console.log(`Your team's page has been generated in ${DIST_DIR}/team.html`));
+  fs.writeFile(distPath, render(teamMembers), (err) => err ? console.error(err) : console.log(`Your team's page has been generated in ${DIST_DIR}/team.html`));
 }
 // Starts application by asking for manager information
 managerPrompt()
