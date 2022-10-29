@@ -18,6 +18,11 @@ function createHtml(teamMembers) {
         <main>
             <section class="card-section flex flex-row flex-wrap justify-center">
 `;
+const end = `
+</section>
+</main>
+</body>
+</html>`;
 
 };
 
