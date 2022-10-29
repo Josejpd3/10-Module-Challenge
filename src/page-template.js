@@ -1,3 +1,4 @@
+// Accounts for every team member and combines need html sections and cards 
 function createHtml(teamMembers) {
     const start = `<!DOCTYPE html>
     <html lang="en">
@@ -18,13 +19,6 @@ function createHtml(teamMembers) {
         <main>
             <section class="card-section flex flex-row flex-wrap justify-center">
 `;
-const end = `
-</section>
-</main>
-</body>
-</html>`;
-
-
 
 
 // Manager Card
@@ -68,7 +62,7 @@ function createEngineer (data) {
     };
 
     
-    // Intern Card
+// Intern Card
 function createIntern (data) {
     return `
                 <div class="card w-72 h-80 bg-slate-200 m-8">
@@ -88,10 +82,17 @@ function createIntern (data) {
         `;
     };
 
+
+    const end = `
+    </section>
+    </main>
+    </body>
+    </html>`;
+
     cards = [];
 
     // Loops through team members
-    
+
     for (i = 0; i < teamMembers.length; i++) {
         if (teamMembers[i].getRole() === "Manager") {
             const managerCard = createManager(teamMembers[i]);
