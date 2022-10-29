@@ -34,7 +34,7 @@ return `
                 </div>
                 <div class="card-info flex flex-col justify-center bg-white m-6 inset-y-1/4 mt-10">
                     <div class="p-2 border-2 border-b-0 border-solid">ID: ${data.id}</div>
-                    <div class="p-2 border-2 border-solid">Email: ${data.email}</div>
+                    <div class="p-2 border-2 border-solid">Email: <a href="mailto:${data.email}">${data.email}</a></div>
                     <div class="p-2 border-2 border-t-0 border-solid">Office Number: ${data.officeNumber}</div>
                 </div>
             </div>
@@ -54,8 +54,8 @@ function createEngineer (data) {
                     </div>
                     <div class="card-info flex flex-col justify-center bg-white m-6 inset-y-1/4 mt-10">
                         <div class="p-2 border-2 border-b-0 border-solid">ID: ${data.id}</div>
-                        <div class="p-2 border-2 border-solid">Email: ${data.email}</div>
-                        <div class="p-2 border-2 border-t-0 border-solid">Github: ${data.github}</div>
+                        <div class="p-2 border-2 border-solid">Email: <a href="mailto:${data.email}">${data.email}</a></div>
+                        <div class="p-2 border-2 border-t-0 border-solid">Github: <a href="https://github.com/${data.github}" target="_blank">${data.github} rel="noopener noreferrer"</a></div>
                     </div>
                 </div>
         `;
@@ -75,7 +75,7 @@ function createIntern (data) {
                     </div>
                     <div class="card-info flex flex-col justify-center bg-white m-6 inset-y-1/4 mt-10">
                         <div class="p-2 border-2 border-b-0 border-solid">ID: ${data.id}</div>
-                        <div class="p-2 border-2 border-solid">Email: ${data.email}</div>
+                        <div class="p-2 border-2 border-solid">Email: <a href="mailto:${data.email}">${data.email}</a></div>
                         <div class="p-2 border-2 border-t-0 border-solid">School: ${data.school}</div>
                     </div>
                 </div>
