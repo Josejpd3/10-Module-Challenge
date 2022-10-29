@@ -99,11 +99,11 @@ function createIntern (data) {
             cards.push(managerCard);
         }
         if (teamMembers[i].getRole() === "Intern") {
-            const internCard = createEngineer(teamMembers[i]);
+            const internCard = createIntern(teamMembers[i]);
             cards.push(internCard);
         }
         if (teamMembers[i].getRole() === "Engineer") {
-            const engineerCard = createIntern(teamMembers[i]);
+            const engineerCard = createEngineer(teamMembers[i]);
             cards.push(engineerCard);
         }
     }
